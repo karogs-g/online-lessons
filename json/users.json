@@ -1,0 +1,15 @@
+[
+  {
+    "_id": {
+      "$oid": "6480a6b45299bc01bb788b14"
+    },
+    "firstName": "Семён",
+    "lastName": "Скрипкин",
+    "phone": "+7-000-000-00-00",
+    "email": "scripkinsemen7@gmail.com",
+    "city": "Kerch",
+    "createdAt": {
+      "$date": "2024-06-13T14:46:40.625Z"
+    }
+  }
+]
