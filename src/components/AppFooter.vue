@@ -38,7 +38,7 @@
                                 class="bi bi-envelope socicon gm m-3 fs-1"></i></a>
                         <a href="https://wa.me/79785620417" target="_blank"><i
                                 class="bi bi-whatsapp socicon wa m-3 fs-1"></i></a>
-                        <a href="https://github.com/" target="_blank"><i
+                        <a href="https://github.com/karogs-g/online-lessons" target="_blank"><i
                                 class="bi bi-github socicon gh m-3 fs-1"></i></a>
                     </div>
                 </div>
