@@ -5,8 +5,6 @@ export default {
 
     data() {
         return {
-            /*    // Данные загружены?
-               isReady: false, */
             // Данные с сервера
             test: null,
             // Новый пост
@@ -61,8 +59,6 @@ export default {
                 ]
             },
             questionIndex: 0,
-            /* respons: quiz.questions, */
-            /* userResponses: Array(quiz.questions.length).fill(false) */
         }
     },
     computed: {
@@ -83,22 +79,8 @@ export default {
         },
 
         async loadData() {
-            /* this.isReady = false; */
-            /* await this.loadUser(); */
-            /* await this.loadTest(); */
             await this.loadUser();
-            /* this.isReady = true; */
         },
-
-        /* async loadTest() {
-            let response = await axios.get('/test', {
-                params: {
-                    testNumber: this.$route.params.testNumber
-                }
-            });
-            this.test = response.data;
-            this.content = this.test.content;
-        }, */
 
         async loadUser() {
             let response = await axios.get('/user');
@@ -119,7 +101,7 @@ export default {
                 this.imgUrl = url;
                 let a = document.createElement("a");
                 let event = new MouseEvent("click");
-                a.download = name || "Сертификат";
+                a.download = name || this.firstName + " " + this.lastName + " - cертификат";
                 a.href = this.imgUrl;
                 a.dispatchEvent(event);
             });
@@ -171,15 +153,9 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="myRecode" @click="saveImage" v-preventReClick>Click to save the picture</div> -->
-
                         </div>
                     </div>
                 </div>
-                <p>
-
-                </p>
-
             </div>
             <div class="d-flex justify-content-end" v-if="questionIndex != quiz.questions.length">
                 <button @click="next" type="button" class="btn btn-warning btn-lg fs-2">Далее</button>

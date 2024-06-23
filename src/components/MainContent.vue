@@ -1,5 +1,4 @@
 <script>
-
 </script>
 <template>
     <div class="card border-0 rounded-0 py-5" style="background-color: #F7C90E ; ">

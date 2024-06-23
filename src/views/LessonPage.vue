@@ -3,14 +3,11 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            /*    // Данные загружены?
-               isReady: false, */
             // Данные с сервера
             lesson: null,
             // Новый пост
             content: ``,
             lessonNumber: 1,
-            /* isPassed: false */
         }
     },
     mounted() {
@@ -35,7 +32,8 @@ export default {
                 }
             });
             this.lesson = response.data;
-            if (this.lessonNumber != this.lesson.lessonNumber && this.lesson.lessonNumber == undefined) {
+            if (this.lessonNumber != this.lesson.lessonNumber 
+            && this.lesson.lessonNumber == undefined) {
                 this.$router.push(`/test`);
             }
             this.content = this.lesson.content;
@@ -54,8 +52,8 @@ export default {
 }
 </script>
 <template>
-    <div class="progress sticky-top" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
-        aria-valuemin="0" aria-valuemax="100">
+    <div class="progress sticky-top" role="progressbar" aria-label="Animated striped example" 
+    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
         <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
             :style="{ 'width': $route.params.lessonNumber * 19 + '%' }"></div>
     </div>

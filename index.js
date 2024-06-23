@@ -52,19 +52,8 @@ let lessonSchema = new mongoose.Schema({
 
 let Lesson = mongoose.model('lesson', lessonSchema);
 
-/* let testSchema = new mongoose.Schema({
-    testNumber: {
-        unique: true,
-        type: Number
-    },
-    content: String,
-    isPassed: Boolean
-},)
-
-let Test = mongoose.model('test', testSchema); */
 
 // Роуты
-
 
 app.get('/user', async function (req, res) {
     let user = await User.findOne().sort({ _id: -1 }).limit(1);

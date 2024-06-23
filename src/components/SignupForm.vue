@@ -3,19 +3,16 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            isLoggedIn: false,
-            isError: false,
-            firstName: "",
-            lastName: "",
-            phone: "",
-            email: "",
-            city: "",
-            signUp: null
-
+            isLoggedIn: false, isError: false,
+            firstName: "", lastName: "",
+            phone: "", email: "",
+            city: "", signUp: null
         }
     },
     mounted() {
-        this.signUp = bootstrap.Modal.getOrCreateInstance(document.getElementById('signUp'));
+        this.signUp = bootstrap.Modal.
+            getOrCreateInstance(document.
+                getElementById('signUp'));
     },
     methods: {
         async signupUser(evt) {
@@ -34,13 +31,11 @@ export default {
             this.phone = "";
             this.email = "";
             this.city = "";
-
             this.isLoggedIn = true;
             this.$router.push("/lesson/1");
         },
     },
 }
-
 </script>
 <template>
     <div class="modal" id="signUp" tabindex="-1">
@@ -53,22 +48,18 @@ export default {
                 <div class="modal-body container">
                     <form class="row g-3 justify-content-center" method="post" @submit="signupUser">
                         <div class="col-md-10">
-                            <!-- <label for="username" class="form-label">Имя</label> -->
                             <input type="text" class="form-control" id="firstName" v-model="firstName" placeholder="Имя"
                                 required>
                         </div>
                         <div class="col-md-10">
-                            <!--  <label for="secondname" class="form-label">Фамилия</label> -->
                             <input type="text" class="form-control" id="secondname" v-model="lastName"
                                 placeholder="Фамилия" required>
                         </div>
                         <div class="col-md-10">
-                            <!--  <label for="secondname" class="form-label">Фамилия</label> -->
                             <input type="tel" class="form-control" id="telephone" v-model="phone" placeholder="Телефон"
                                 required>
                         </div>
                         <div class="col-md-10">
-                            <!-- <label for="email" class="form-label">Имя пользователя</label> -->
                             <div class="input-group">
                                 <span class="input-group-text" id="inputGroupPrepend2">@</span>
                                 <input type="email" class="form-control" id="email"
@@ -76,7 +67,6 @@ export default {
                             </div>
                         </div>
                         <div class="col-md-10">
-                            <!-- <label for="city" class="form-label">Город</label> -->
                             <input type="text" class="form-control" id="city" v-model="city" placeholder="Город"
                                 required>
                         </div>
